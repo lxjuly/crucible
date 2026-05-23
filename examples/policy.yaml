@@ -1,0 +1,23 @@
+version: 1
+
+rules:
+  - id: no_delete
+    description: Agent cannot delete files
+    action: delete_file
+    effect: deny
+
+  - id: protected_docs
+    description: Protected documents cannot be modified
+    targets:
+      - workspace/decisions.md
+    effect: deny
+
+  - id: rationale_required
+    description: All proposals must include rationale
+    require:
+      - rationale
+
+  - id: reversible_changes
+    description: All changes must produce a reversible diff
+    require:
+      - diff
