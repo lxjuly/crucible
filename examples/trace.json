@@ -1,0 +1,24 @@
+{
+  "trace_id": "trace_001",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "intent": "Split MVP into three milestones",
+  "action": {
+    "type": "edit_file",
+    "target": "workspace/plan.md"
+  },
+  "rationale": "Breaking the project into milestones improves reviewability and execution clarity.",
+  "sandbox": {
+    "workspace": "/tmp/crucible/run_001",
+    "status": "success"
+  },
+  "verification": {
+    "policy_passed": true,
+    "checks": [
+      "reversible_diff",
+      "protected_file_check"
+    ]
+  },
+  "human_review": {
+    "status": "pending"
+  }
+}
